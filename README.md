@@ -29,3 +29,18 @@ Follow the steps:
 - git clone
 - npm i
 - ng serve
+
+# Task 2: Serve SPA in AWS S3 and CloudFront Service
+
+## Task 2.1
+## Manual Deployment
+Below are the urls that show the results of manual deployment.
+- Object URL: https://chg-shop-angular-cloudfront.s3.amazonaws.com/index.html
+- CloudFront distribution URL: https://d34t4gbjofyzjk.cloudfront.net
+
+## Task 2.2 + Additional tasks
+## Automated Deployment
+Below are the urls that show the results of automated deployment of the task 2.2 and Additional tasks,
+using serverless-finch, serverless-single-page-app-plugin, serverless-build-client.
+- Object URL: https://js-cc-cloudfront-s3-sls.s3.amazonaws.com/index.html
+- CloudFront distribution URL: https://d452lnzqkf712.cloudfront.net
