@@ -1,0 +1,86 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$primary-palette: (
+  50: #effcfc,
+  100: #e9f7f7,
+  200: #e2efef,
+  300: #61b7f7,
+  400: #b1bdbd,
+  500: #929e9e,
+  600: #697575,
+  700: #566161,
+  800: #374242,
+  900: #172121,
+  A100: #c2e4ff,
+  A200: #addcff,
+  A400: #1f9eff,
+  A700: #00518f,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  )
+);
+
+$secondary-palette: (
+  50: #f9f9ff,
+  100: #f4f5ff,
+  200: #eff0ff,
+  300: #e2e3f5,
+  400: #bfc0d2,
+  500: #a1a2b3,
+  600: #787889,
+  700: #636474,
+  800: #444554,
+  900: #222431,
+  A100: #c2e4ff,
+  A200: #addcff,
+  A400: #1f9eff,
+  A700: #00518f,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  )
+);
+
+$my-primary: mat.define-palette($primary-palette, 700, 300, 900);
+$my-accent: mat.define-palette($secondary-palette, 300, 100, 500);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);
+@include mat.core-theme($my-theme);
+@include mat.button-theme($my-theme);
